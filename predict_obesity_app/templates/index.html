@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Status Prediction</title>
+</head>
+<body>
+    <h1>Health Status Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required><br>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required><br>
+
+        <label for="family_history_with_overweight">Family history with overweight:</label>
+        <select id="family_history_with_overweight" name="family_history_with_overweight" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="FAVC">Frequent high caloric food?</label>
+        <select id="FAVC" name="FAVC" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="FCVC">Vegetables in meals (0-3):</label>
+        <input type="number" id="FCVC" name="FCVC" min="0" max="3" required><br>
+
+        <label for="NCP">Main meals per day:</label>
+        <input type="number" id="NCP" name="NCP" required><br>
+
+        <label for="CAEC">Food between meals:</label>
+        <select id="CAEC" name="CAEC" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="SMOKE">Do you smoke?</label>
+        <select id="SMOKE" name="SMOKE" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="CH2O">Water intake (liters):</label>
+        <input type="number" id="CH2O" name="CH2O" required><br>
+
+        <label for="SCC">Monitor daily calories?</label>
+        <select id="SCC" name="SCC" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="FAF">Physical activity frequency (0-5):</label>
+        <input type="number" id="FAF" name="FAF" min="0" max="5" required><br>
+
+        <label for="TUE">Technology use (hours):</label>
+        <input type="number" id="TUE" name="TUE" required><br>
+
+        <label for="CALC">Alcohol consumption frequency:</label>
+        <select id="CALC" name="CALC" required>
+            <option value="1">Daily</option>
+            <option value="2">Weekly</option>
+            <option value="3">Monthly</option>
+            <option value="4">Rarely</option>
+            <option value="5">Never</option>
+        </select><br>
+
+        <label for="MTRANS">Transportation method:</label>
+        <select id="MTRANS" name="MTRANS" required>
+            <option value="1">Walking</option>
+            <option value="2">Bicycle</option>
+            <option value="3">Car</option>
+            <option value="4">Bus</option>
+            <option value="5">Train</option>
+        </select><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Predicted Health Status: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
