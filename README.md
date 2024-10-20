@@ -1,6 +1,6 @@
 # Dockerized Obesity Prediction App
 
-This repository contains a simple web application designed to predict the health status of a person in terms of weight (e.g., obesity) based on certain input features. The machine learning model, which is trained using the XGBoost algorithm, is containerized using Docker for easy deployment and sharing.
+This repository contains a simple web application designed to predict the health status of a person in terms of weight (e.g. obesity) based on certain input features. The machine learning model, which is trained using the XGBoost algorithm, is containerized using Docker for easy deployment and sharing.
 
 ## Project Structure
 
