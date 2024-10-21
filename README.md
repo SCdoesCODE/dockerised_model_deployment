@@ -17,7 +17,7 @@ To run this project on your local machine, you will need to have [Docker Desktop
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/dockerised_model_deployment.git
+git clone git@github.com:SCdoesCODE/dockerised_model_deployment.git
 cd dockerised_model_deployment 
 ```
 
